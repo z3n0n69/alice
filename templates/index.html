@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALICE</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
 </head>
 <body>
     <div class="apptitle">
@@ -14,15 +15,16 @@
 
 
     <div>
-        <form action="">
+        <form name = "loginForm" id = "loginForm" action="">
             <div class="formdiv1">
                 <p>Sign In</p>
                 <p>Enter your credentials to continue</p>
-                <input type="text" placeholder="Enter your Username"> <br>
-                <input type="password" placeholder="Enter your Password"> <br>
-                <button>Submit</button>
+                <input name = "usernameinput" type="text" placeholder="Enter your Username"> <br>
+                <input name = "passwordinput" type="password" placeholder="Enter your Password"> <br>
+                <button id = "submitButton">Submit</button>
             </div>
         </form>
     </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>
