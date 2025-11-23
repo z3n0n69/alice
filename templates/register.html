@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALICE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
+</head>
+<body>
+    <div class="apptitle">
+        <p>ALICE: Your new companion for productivity</p>
+    </div>
+
+
+
+    <div>
+        <form name = "registerForm" id = "registerForm" action="">
+            <div class="formdiv1">
+                <p>Register</p>
+                <p>Enter your credentials to continue</p>
+                <input name = "usernameinput" type="text" placeholder="Enter your Username"> <br>
+                <input name = "passwordinput" type="password" placeholder="Enter your Password"> <br>
+                <button id = "submitButton">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='register.js') }}"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+</body>
+</html>

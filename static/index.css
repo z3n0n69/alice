@@ -101,3 +101,8 @@ button:hover {
         padding: 20px 15px;
     }
 }
+
+a {
+    color: white;
+    text-align:center; 
+}
