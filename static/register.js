@@ -1,6 +1,7 @@
 let form = document.getElementById("registerForm");
 
 form.addEventListener('submit', function(event){
+    event.preventDefault();
     let username = document.forms["registerForm"]["usernameinput"].value;
     let password = document.forms["registerForm"]["passwordinput"].value; 
     
@@ -20,9 +21,15 @@ form.addEventListener('submit', function(event){
         
         //send the information to attempt to register the user
         socket.on("connect", () => {
-            socket.emit("login", registerUser); 
+            socket.emit("register", registerUser); 
         });
 
-        socket.on()
+        socket.on("message", (msg) => {
+            if (msg == "userexist"){    
+                window.alert("username aready exists");
+            } else if (msg = "registered"){ 
+                window.alert("Registered. Please go back to login page and sign in"); 
+            }; 
+        });
     }
 });

@@ -24,10 +24,10 @@ form.addEventListener('submit', function(event){
         }); 
         //receiver of message from server 
         socket.on("message", (msg) => {
-            if (msg == "True"){
+            if (msg == true){
                 window.alert("Routing to Dashboard"); 
-                window.location.href("/dashboard");
-                
+                document.cookie = "username = " + username + ";" + "max-age=86400"; 
+                window.location.href = "/dashboard"; 
             }
             else{
                 window.alert("User does not exist")
